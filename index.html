@@ -96,15 +96,95 @@
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 24px;
-      height: 64px;
+      height: 72px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .navbar-logo img {
       height: 36px;
       display: block;
+    }
+
+    .navbar-cta {
+      display: inline-flex;
+      align-items: center;
+      background: var(--red);
+      border-radius: 100px;
+      padding: 6px 6px 6px 22px;
+      gap: 14px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(254, 6, 59, 0.40);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .navbar-cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .navbar-cta-text {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .navbar-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--red);
+      font-family: 'Sora', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 10px 20px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .navbar-cta-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--red);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (max-width: 720px) {
+      .navbar .container {
+        height: 64px;
+        padding: 0 16px;
+      }
+
+      .navbar-logo img {
+        height: 30px;
+      }
+
+      .navbar-cta {
+        padding: 4px 4px 4px 14px;
+        gap: 8px;
+      }
+
+      .navbar-cta-text {
+        display: none;
+      }
+
+      .navbar-cta-btn {
+        font-size: 0.72rem;
+        padding: 9px 16px;
+        letter-spacing: 0.06em;
+      }
     }
 
     /* ── HERO ── */
@@ -271,46 +351,6 @@
       margin-bottom: 3px;
     }
 
-    /* ── PLAYBOOK CTA ── */
-    .playbook-section {
-      padding: 0 24px 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-      text-align: center;
-    }
-
-    .playbook-section p {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(0.95rem, 2.8vw, 1.15rem);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 0.04em;
-      line-height: 1.5;
-      text-transform: uppercase;
-    }
-
-    .playbook-button {
-      display: inline-block;
-      background: var(--red);
-      color: #fff;
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.05rem, 3vw, 1.25rem);
-      font-weight: 700;
-      padding: 18px 44px;
-      border-radius: 12px;
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      box-shadow: 0 6px 18px rgba(254, 6, 59, 0.38);
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .playbook-button:hover {
-      background: var(--red-dark);
-      transform: translateY(-1px);
-    }
-
     /* ── FOOTER ── */
     .footer {
       background: var(--navy);
@@ -372,6 +412,21 @@
           alt="Full Sales System"
         />
       </div>
+      <a
+        href="https://links.fullsalessystem.com/playbook"
+        class="navbar-cta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="navbar-cta-text">Não recebeu o playbook por email?</span>
+        <span class="navbar-cta-btn">
+          Baixar agora
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="13 6 19 12 13 18"></polyline>
+          </svg>
+        </span>
+      </a>
     </div>
   </header>
 
@@ -449,17 +504,6 @@
         </p>
       </div>
     </div>
-  </section>
-
-  <!-- PLAYBOOK CTA -->
-  <section class="playbook-section">
-    <p>NÃO RECEBEU O PLAYBOOK POR EMAIL?</p>
-    <a
-      href="https://links.fullsalessystem.com/playbook"
-      class="playbook-button"
-      target="_blank"
-      rel="noopener noreferrer"
-    >Baixar agora</a>
   </section>
 
   <!-- FOOTER -->
