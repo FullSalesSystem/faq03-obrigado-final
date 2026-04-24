@@ -111,18 +111,8 @@
     .navbar-cta {
       display: inline-flex;
       align-items: center;
-      background: var(--red);
-      border-radius: 100px;
-      padding: 6px 6px 6px 22px;
       gap: 14px;
       text-decoration: none;
-      box-shadow: 0 6px 20px rgba(254, 6, 59, 0.40);
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .navbar-cta:hover {
-      background: var(--red-dark);
-      transform: translateY(-1px);
     }
 
     .navbar-cta-text {
@@ -139,22 +129,29 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #fff;
-      color: var(--red);
+      background: var(--red);
+      color: #fff;
       font-family: 'Sora', sans-serif;
       font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.08em;
-      padding: 10px 20px;
+      padding: 11px 22px;
       border-radius: 100px;
       text-transform: uppercase;
       white-space: nowrap;
+      box-shadow: 0 6px 18px rgba(254, 6, 59, 0.38);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .navbar-cta:hover .navbar-cta-btn {
+      background: var(--red-dark);
+      transform: translateY(-1px);
     }
 
     .navbar-cta-btn svg {
       width: 14px;
       height: 14px;
-      stroke: var(--red);
+      stroke: #fff;
       fill: none;
       stroke-width: 2.5;
       stroke-linecap: round;
@@ -172,7 +169,6 @@
       }
 
       .navbar-cta {
-        padding: 4px 4px 4px 14px;
         gap: 8px;
       }
 
@@ -182,7 +178,7 @@
 
       .navbar-cta-btn {
         font-size: 0.72rem;
-        padding: 9px 16px;
+        padding: 10px 18px;
         letter-spacing: 0.06em;
       }
     }
