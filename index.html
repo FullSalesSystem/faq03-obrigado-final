@@ -160,17 +160,6 @@
     Quero pular a fila
   </a>
 
-  <!-- EXIT POPUP -->
-  <div class="exit-popup-overlay" id="exitPopup">
-    <div class="exit-popup">
-      <button class="exit-popup-close" id="exitPopupClose">&times;</button>
-      <img src="assets/logo-branco.png" alt="Full Sales System" class="exit-popup-logo" />
-      <h3>Antes de sair, conheça o <span>Full Sales Flix</span></h3>
-      <p>Nossa plataforma <strong>GRATUITA</strong> com playbooks, estudos de caso, guias práticos e workshops com especialistas para turbinar seu comercial!</p>
-      <a href="https://aulagratuita.fullsalessystem.com/" target="_blank" rel="noopener" class="exit-popup-btn">QUERO CONHECER AGORA &rarr;</a>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-logo">
@@ -189,23 +178,6 @@
   </footer>
 
   <script>
-    (function(){
-      var popup = document.getElementById('exitPopup');
-      var shown = false;
-      document.addEventListener('mouseout', function(e){
-        if (!shown && e.clientY < 5) {
-          popup.classList.add('active');
-          shown = true;
-        }
-      });
-      document.getElementById('exitPopupClose').addEventListener('click', function(){
-        popup.classList.remove('active');
-      });
-      popup.addEventListener('click', function(e){
-        if (e.target === popup) popup.classList.remove('active');
-      });
-    })();
-
     if (window.innerWidth <= 600) {
       var g = document.querySelector('.flix-gallery');
       if (g) {
