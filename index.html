@@ -293,5 +293,12 @@
       });
     })();
   </script>
+  <script>
+  /* Conversao Meta: clique no WhatsApp = Contact (pixel vem via GTM) */
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+    if (a && typeof fbq === 'function') fbq('track', 'Contact');
+  });
+  </script>
 </body>
 </html>
